@@ -1,8 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request
-import os
 import numpy as np
 import json
-os.environ['FLASK_ENV']="deployment"
+
 app = Flask(__name__)
 
 def get_num_points(num_batch):
