@@ -9,7 +9,7 @@ def get_num_points(num_batch):
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("inputs.html")
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
@@ -20,7 +20,7 @@ def login():
         min_infected_aux=request.form["min_infected"]
         return redirect(url_for("user", usr=user,percentage=percentage_aux,capacity=capacity_aux,min_infected=min_infected_aux))
     else:
-        return render_template("login.html")
+        return render_template("inputs.html")
 
 @app.route("/<usr>/<capacity>/<min_infected>/<percentage>")
 def user(usr,min_infected,percentage,capacity):
@@ -40,7 +40,7 @@ def user(usr,min_infected,percentage,capacity):
             point=np.random.rand(2,1)
             dictionary["Num_Batch_"+str(i)]["Num_Point_"+str(j)]={'x1':point[0][0],'x2':point[1][0]}
     json_data=json.dumps(dictionary)
-    return render_template("simulation.html",predictions=json_data)
+    return render_template("index.html",predictions=json_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
