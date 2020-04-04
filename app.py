@@ -40,7 +40,7 @@ def user(usr,min_infected,percentage,capacity):
             point=np.random.rand(2,1)
             dictionary["Num_Batch_"+str(i)]["Num_Point_"+str(j)]={'x1':point[0][0],'x2':point[1][0]}
     json_data=json.dumps(dictionary)
-    return json_data
+    return render_template("simulation.html",predictions=json_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
