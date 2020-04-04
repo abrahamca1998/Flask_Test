@@ -50,14 +50,22 @@
           <!-- Content Row -->
 
           <div class="row">
-            <form action ="#" method="POST">
+            <form action ="https://cuarentena-flask-app.herokuapp.com/login" method="POST">
               <div class="form-group">
                 <label for="exampleInputEmail1">Percentage detection</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Percentage detection">
+                <input type="text" class="form-control" name="nm" aria-describedby="emailHelp" placeholder="Percentage detection">
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Hygiene</label>
-                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Hygiene">
+                <input type="text" class="form-control" name="percentage" placeholder="Hygiene">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Hygiene</label>
+                <input type="text" class="form-control" name="capacity" placeholder="Hygiene">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Hygiene</label>
+                <input type="text" class="form-control" name="min_infected" placeholder="Hygiene">
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
