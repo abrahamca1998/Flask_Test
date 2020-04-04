@@ -24,7 +24,6 @@ def login():
     else:
         return render_template("inputs.html")
 
-@app.route("/<usr>/<capacity>/<min_infected>/<percentage>")
 def user(usr,min_infected,percentage,capacity):
    
     dictionary={}
